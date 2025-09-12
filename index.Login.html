@@ -140,6 +140,35 @@
             alert('Failed to update user!');
         }
     })
+
+    // Exit
+    function myExit() {
+        CurrentUser = null
+        LoginBox.style.display = 'flex'
+        ProfileBox.style.display = 'none'
+        document.querySelector('.email').value = null;
+        document.querySelector('.password').value = null
+    }
+    // Exit
+
+    // mydel
+    async function myDel() {
+        if (!confirm("Do you want to clear your account")) return;
+
+        try {
+            await fetch(`${API}/${CurrentUser.id}`, { method: "DELETE" });
+            alert("delete user❌");
+            myExit();
+
+        } catch (err) {
+            console.error(err);
+            alert("wrong❌");
+        }
+
+
+    }
+    // mydel
+
 </script>
 
 </html>
