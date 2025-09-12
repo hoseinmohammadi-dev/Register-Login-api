@@ -23,49 +23,5 @@
         <a href="index.Login.html" target="_blank">login</a>
     </div>
 </body>
-<script>
-    const API = "https://68c3f89d81ff90c8e61ac7b0.mockapi.io/Users"
-
-    const inp = document.querySelectorAll('.box>input')
-    const regBtn = document.getElementById('regBtn')
-
-
-    regBtn.addEventListener('click', () => {
-        ///////////// check inp value//////////////
-        let flag = 0
-        inp.forEach((val) => val.value == "" && flag++)
-        if (flag > 0) {
-            alert('fill your all information')
-        } else {
-            alert('successfull')
-
-            const data = {
-                FullName: inp[0].value,
-                Email: inp[1].value,
-                Password: inp[2].value,
-                Age: inp[3].value,
-                role: document.querySelector('.box>select').value
-            }
-
-            fetch(API, {
-                method: 'POST',
-                headers: { 'content-type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-                .then(res => {
-                    if (res.ok) {
-                        res.json()
-                        return
-                    }
-                })
-                .then(task => {
-                    alert("you added to data base")
-                })
-                .catch(error => {
-                    alert("try again")
-                })
-        }
-    })
-</script>
-
+<script src="js/script.js"></script>
 </html>
