@@ -31,5 +31,6 @@ body{
         margin-top: 10px;
         background-color: #4e90fb;
         color: #f0f1f8;
+        cursor: pointer;
     }
 }
