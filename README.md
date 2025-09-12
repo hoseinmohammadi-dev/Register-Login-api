@@ -3,6 +3,8 @@
 This project is a simple Register/Login system built with HTML, CSS, and JavaScript, connected to a [MockAPI](https://mockapi.io/) backend for user data storage.  
 It allows users to register, login, view their profile, and manage account actions such as edit or delete.
 
+<img width="572" height="645" alt="Image" src="https://github.com/user-attachments/assets/71ae8bf9-b040-4332-a79f-f2d6482b9ba1" />
+<img width="638" height="458" alt="Image" src="https://github.com/user-attachments/assets/444d8db6-ea61-4319-9598-9a355cb93887" />
 ---
 
 ## 🚀 Features
@@ -33,6 +35,6 @@ This project demonstrates use of several modern JavaScript features:
 
 ## 🔗 Demo & Repository
 - Live Demo: [click to whatch demo](https://hoseinmohammadi-dev.github.io/Register-Login-api/)
-- 
+  
 
 ---
