@@ -32,6 +32,7 @@ This project demonstrates use of several modern JavaScript features:
 ---
 
 ## 🔗 Demo & Repository
-- Live Demo: [Coming Soon](#)  
+- Live Demo: [click to whatch demo](https://hoseinmohammadi-dev.github.io/Register-Login-api/)
+- 
 
 ---
