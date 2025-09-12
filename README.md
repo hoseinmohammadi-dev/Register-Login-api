@@ -1,0 +1,37 @@
+# Register & Login Page (Group Project)
+
+This project is a simple Register/Login system built with HTML, CSS, and JavaScript, connected to a [MockAPI](https://mockapi.io/) backend for user data storage.  
+It allows users to register, login, view their profile, and manage account actions such as edit or delete.
+
+---
+
+## 🚀 Features
+- Register a new user with unique email (no duplicates allowed).
+- Validate email format (@gmail.com, @gmail.co, @gmail.ir) with at least 3 characters before @.
+- Login with email and password.
+- Display profile details after login.
+- Logout and delete account functionality.
+
+---
+
+## 🛠 Methods & Functions Used
+This project demonstrates use of several modern JavaScript features:
+
+- `async / await` → Handling asynchronous API requests.  
+- `Promise` → Fetch API returns promises for server communication.  
+- `fetch()` → Used for GET, POST, and DELETE requests to MockAPI.  
+- `Array.prototype.some()` → Checks if an email already exists before registering.  
+- `Array.prototype.find()` → Finds a specific user object during login.  
+- `String.prototype.includes()` → Validates if email contains specific characters (e.g., @, .com, .ir).  
+- `String.prototype.trim()` → Removes extra spaces in user inputs.  
+- `String.prototype.toLowerCase()` → Makes email comparison case-insensitive.  
+- `String.prototype.indexOf()` → Ensures minimum 3 characters before @ in email.  
+- `alert()` → Basic UI feedback for success/error messages.  
+- `confirm()` → Used before account deletion for confirmation.  
+
+---
+
+## 🔗 Demo & Repository
+- Live Demo: [Coming Soon](#)  
+
+---
