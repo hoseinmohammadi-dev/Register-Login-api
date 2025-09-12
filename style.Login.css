@@ -35,7 +35,7 @@
 
     >button {
         margin-top: 10px;
-        background-color: #4e90fb;
+        background-color: #5b55ff;
         color: #f0f1f8;
         cursor: pointer;
     }
@@ -51,9 +51,7 @@
     width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.24);
     padding: 20px;
-    /* ///////////////flex////////////// */
     display: none;
-    /* ///////////////flex////////////// */
     flex-wrap: wrap;
     justify-content: center;
     border-radius: 24px;
@@ -68,7 +66,7 @@
         width: 100%;
         margin-bottom: 10px;
         padding: 10px;
-        border-radius: 14px;
+        border-radius: 8px;
         border: none;
         outline: none;
         box-shadow: 0 0 20px rgb(224, 224, 224);
@@ -82,17 +80,20 @@
 
     >button {
         margin-top: 10px;
-        background-color: #4e90fb;
+        background-color: #5b55ff;
         color: #f0f1f8;
         cursor: pointer;
     }
 
-    .EditBox {
+    .edit-box {
+        box-shadow: 0 0 20px rgba(128, 128, 128, 0.398);
         margin-top: 20px;
+        border-radius: 14px;
+        padding: 20px;
 
         >button {
             margin-top: 10px;
-            background-color: #4e90fb;
+            background-color: #0c8008b7;
             color: #f0f1f8;
             cursor: pointer;
         }
