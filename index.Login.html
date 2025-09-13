@@ -19,14 +19,14 @@
     <!-- Profile Box -->
     <div class="Profile">
         <h2>Profile</h2>
-        <P>FullName</P>
-        <P>Email</P>
-        <P>password</P>
-        <P>Age</P>
+        <P id="FullName"></P>
+        <P id="Email"></P>
+        <P id="Password"></P>
+        <P id="Age"></P>
         <!-- buttons -->
-        <button>Edit</button>
-        <button>Delete</button>
-        <button>Exit</button>
+        <button onclick="FnEdit()">Edit</button>
+        <button onclick="FnDel()">Delete</button>
+        <button onclick="FnExit()">Exit</button>
         <!-- Edit Boc -->
 
         <div class="EditBox">
@@ -79,7 +79,7 @@
 
                 LoginBox.style.display = 'none'
                 ProfileBox.style.display = 'flex'
-
+                 ShowData(user)
 
 
             } else {
@@ -94,7 +94,12 @@
 
     })
 
-    
+    function ShowData(user){
+        document.getElementById('FullName').textContent ='FullName :' + user.FullName
+        document.getElementById('Email').textContent ='Email :' + user.Email
+        document.getElementById('Password').textContent ='Password :' + user.Password
+        document.getElementById('Age').textContent = 'Age :' + user.Age
+    }
 </script>
 
 </html>
