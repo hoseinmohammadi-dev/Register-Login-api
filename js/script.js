@@ -25,7 +25,7 @@ regBtn.addEventListener('click', async () => {
         !data.Email.includes("@gmail.com") ||
         data.Email.indexOf("@") < 3
     ) {
-        alert("invalid email");
+        alert("invalid email ❌");
         return;
     }
 
@@ -36,16 +36,16 @@ regBtn.addEventListener('click', async () => {
         const users = await listRes.json()
         const exists = users.some(u => u.Email && u.Email.toLowerCase() === data.Email.toLowerCase())
         if (exists) {
-            alert("this email has already been recorded")
+            alert("this email has already been recorded ❌")
             return
         }
     } catch (err) {
         console.error(err)
-        alert('error email')
+        alert('error email❌')
         return
     }
 
-    alert('successfull')
+    alert('successfull✅')
 
     try {
         const res = await fetch(API, {
@@ -53,9 +53,9 @@ regBtn.addEventListener('click', async () => {
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
         })
-        if (!res.ok) throw new Error('failed to save')
+        if (!res.ok) throw new Error('failed to save❌')
         await res.json()
-        alert("you added to data base")
+        alert("you added to data base✅")
     } catch (error) {
         console.error(error)
         alert("try again")

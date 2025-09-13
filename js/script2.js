@@ -10,7 +10,7 @@
 
     async function getAllUsers() {
         const res = await fetch(API)
-        if (!res.ok) throw new Error("Error receiving users")
+        if (!res.ok) throw new Error("Error receiving users ❌")
         return res.json()
     }
 
@@ -92,10 +92,10 @@
 
             editBox.style.display = 'none';
 
-            alert('User updated!');
+            alert('User updated!✅');
         } catch (err) {
             console.error(err);
-            alert('Failed to update user!');
+            alert('Failed to update user!❌');
         }
     })
 
@@ -122,7 +122,5 @@
             console.error(err);
             alert("wrong❌");
         }
-
-
     }
     // mydel
