@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="style.Login.css">
 </head>
+
 <body>
     <div class="Login">
         <h1>Login</h1>
-        <input type="email" placeholder="Your Email">
-        <input type="password" placeholder="Your password">
-        <button>Login</button>
+        <input class="email" type="email" placeholder="Your Email">
+        <input class="password" type="password" placeholder="Your password">
+        <button class="LogBtn">Login</button>
     </div>
 
     <!-- Profile Box -->
-     <div class="Profile">
+    <div class="Profile">
         <h2>Profile</h2>
         <P>FullName</P>
         <P>Email</P>
         <P>password</P>
         <P>Age</P>
-
-
-
-
+        <!-- buttons -->
         <button>Edit</button>
         <button>Delete</button>
         <button>Exit</button>
-
+        <!-- Edit Boc -->
 
         <div class="EditBox">
             <input type="text" placeholder="FullName">
@@ -37,7 +36,65 @@
             <input type="number" placeholder="Age">
             <button>Register Changes</button>
         </div>
-     </div>
+    </div>
     <!-- Profile Box -->
 </body>
+<script>
+    const API = 'https://68c3f89d81ff90c8e61ac7b0.mockapi.io/Users'
+
+    const LogBtn = document.querySelector('.LogBtn')
+    const LoginBox = document.querySelector('.Login')
+    const ProfileBox = document.querySelector('.Profile')
+    let CurrentUser = null
+
+    async function getAllUsers() {
+        const res = await fetch(API)
+        if (!res.ok) throw new Error("Error receiving users")
+        return res.json()
+    }
+
+
+    LogBtn.addEventListener('click', async () => {
+
+        const email = document.querySelector('.email').value.trim().toLowerCase()
+        const pass = document.querySelector('.password').value
+
+
+        if (email == '' || pass == '') {
+            alert('fill your email and password')
+            return
+        }
+
+        try {
+            const users = await getAllUsers()
+
+            const user = users.find(
+                u => (u.Email || '').toLowerCase() === email && (u.Password || '') === pass
+            );
+
+            if (user) {
+                CurrentUser = user
+
+                alert('Login successful ✅')
+
+                LoginBox.style.display = 'none'
+                ProfileBox.style.display = 'flex'
+
+
+
+            } else {
+                alert('wrong !!!!')
+            }
+
+        } catch (err) {
+            console.error(err);
+
+        }
+
+
+    })
+
+    
+</script>
+
 </html>
