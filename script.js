@@ -44,7 +44,6 @@ regBtn.addEventListener('click', async () => {
         alert('error email❌')
         return
     }
-
     alert('successful✅')
 
     try {
