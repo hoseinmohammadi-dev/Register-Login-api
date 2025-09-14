@@ -45,7 +45,7 @@ regBtn.addEventListener('click', async () => {
         return
     }
 
-    alert('successfull✅')
+    alert('successful✅')
 
     try {
         const res = await fetch(API, {
